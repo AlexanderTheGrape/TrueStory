@@ -15,3 +15,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
     console.log(`Server running at port ${port}`)
 })
+
+// in this folder, run 'node app.js' to start the server

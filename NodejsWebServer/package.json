@@ -5,5 +5,8 @@
   "main": "app.js",
   "author": {
     "name": ""
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
   }
 }
