@@ -1,6 +1,7 @@
 'use strict';
 
 console.log('Hello world');
+// in this folder, run 'node app.js' to start the server
 
 const http = require('http')
 
@@ -16,4 +17,3 @@ server.listen(port, () => {
     console.log(`Server running at port ${port}`)
 })
 
-// in this folder, run 'node app.js' to start the server
