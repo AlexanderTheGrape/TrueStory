@@ -1,4 +1,5 @@
-$ npx tsc asyncFlowExample.ts
+// $ npx tsc asyncFlowExample.ts
+// $ node asyncFlowExample.js
 function final(someInput, callback) {
     callback(`${someInput} and terminated by executing callback `);
 }
@@ -18,19 +19,22 @@ function initiate() {
 initiate();
 
 
-// ----------- Control flow -------------
+// ----------- Asyncronous Control flow -------------
 
 function getSong() {
     var _song:string = "";
     let i = 100;
-    for (i; i > 0; i -= 1) {
-        _song += `${i} beers on the wall, you take one down and pas it around, ${i - 1
-            } bottles of beer on the wall\n`;
+    setTimeout(function () {
+        for (i; i > 0; i -= 1) {
+            _song += `${i} beers on the wall, you take one down and pass it around, ${i - 1
+                } bottles of beer on the wall\n`;
 
-        if (i === 1) {
-            _song += "Hey let's get some more beer";
+            if (i === 1) {
+                _song += "Hey let's get some more beer";
+            }
         }
-    }
+    }, 0);
+
 
     return _song;
 }
@@ -43,3 +47,7 @@ function singSong(_song) {
 const song = getSong();
 // this will work
 singSong(song);
+
+// -------------- Async Operation Patterns: 1. In Series ------------
+
+// Do the write up & test it now that I've read it
